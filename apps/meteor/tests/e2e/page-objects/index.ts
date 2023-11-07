@@ -11,5 +11,6 @@ export * from './omnichannel-current-chats';
 export * from './omnichannel-livechat';
 export * from './omnichannel-manager';
 export * from './omnichannel-custom-fields';
+export * from './omnichannel-units';
 export * from './home-omnichannel';
 export * from './utils';

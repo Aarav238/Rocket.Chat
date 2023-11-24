@@ -58,4 +58,8 @@ export class OmnichannelSidenav {
 	get linkCannedResponses(): Locator {
 		return this.page.locator('a[href="/omnichannel/canned-responses"]');
 	}
+
+	get linkMonitors(): Locator {
+		return this.page.locator('a[href="/omnichannel/monitors"]');
+	}
 }

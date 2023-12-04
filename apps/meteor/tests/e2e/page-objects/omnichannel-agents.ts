@@ -25,11 +25,11 @@ export class OmnichannelAgents {
 	}
 
 	get firstRowInTable() {
-		return this.page.locator('[data-qa="GenericTableAgentInfoBody"] .rcx-table__row--action .rcx-table__cell:first-child');
+		return this.page.locator('[data-qa="GenericTableAgentInfoBody"] > tr:first-child');
 	}
 
 	get btnDeletefirstRowInTable() {
-		return this.page.locator('button[title="Remove"]');
+		return this.firstRowInTable.locator('button[title="Remove"]');
 	}
 
 	get btnModalRemove(): Locator {
@@ -46,5 +46,9 @@ export class OmnichannelAgents {
 
 	get btnSave(): Locator {
 		return this.page.locator('[data-qa="AgentEditButtonSave"]');
+	}
+
+	findRowByName(name: string) {
+		return this.page.locator('tr', { has: this.page.locator(`td >> text="${name}"`) });
 	}
 }
